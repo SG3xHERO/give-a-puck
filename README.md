@@ -1,4 +1,4 @@
-# Sys-con (sg3xhero fork)
+# Sys-con (give-a-puck fork)
 
 > This is a fork of [o0Zz/sys-con](https://github.com/o0Zz/sys-con) with a fix for the
 > Steam Controller 2026's 2.4GHz wireless "puck" dongle (VID `28de` PID `1304`), which
@@ -15,7 +15,7 @@
 
 ## Description
 Sys-con is a Nintendo Switch module that adds support for all HID and XID joysticks and gamepads to the Nintendo Switch.
-Only **USB** connection is supported (For Bluetooth connection prefer to use ndeadly's [MissionControl](https://github.com/ndeadly/MissionControl))
+Only **USB** connection is supported (For Bluetooth connection prefer to use ndeadly's [MissionControl](https://github.com/ndeadly/MissionControl)) 
 
 ## Installation
 Download the latest zip from the [releases page](https://github.com/o0zz/sys-con/releases). Extract it to your SD card root folder and boot/reboot your switch.
