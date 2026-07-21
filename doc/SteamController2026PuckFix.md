@@ -49,20 +49,28 @@ other changes were needed.
 
 ## Config notes specific to this unit
 
-The default `[steam2026]` face button mapping in `config.ini` (`B=1 A=2 Y=4 X=3`) does
-**not** match the button labels printed on this controller - pressing the button
-labeled `A` triggers the Switch's `Y`, etc. If you want the labels to match, use:
+The upstream `[steam2026]` face button mapping in `config.ini` (`B=1 A=2 Y=4 X=3`) does
+**not** match the button labels printed on this controller - it does Xbox-style
+position mapping rather than label matching. This fork changes the `[steam2026]`
+defaults so the printed labels match 1:1 (press `A`, get `A`):
 
 ```ini
 [steam2026]
-X=1
-Y=2
-B=3
-A=4
+A=1
+B=2
+Y=3
+X=4
 ```
 
-This is a personal-preference remap (label-matching vs. Xbox-style position-matching),
-not a bug fix - leave the defaults if you prefer position-matching instead.
+These values were confirmed by testing on real hardware, not derived purely from the
+report struct - an earlier attempt at deriving this from the raw capture data alone
+(`X=1 Y=2 B=3 A=4`) turned out to have `A`/`X` and `B`/`Y` swapped, so trust the table
+above over anything that tries to re-derive it from the struct field names in
+`SteamController2026.h` (the `a`/`b`/`x`/`y` bitfield names in that struct do not
+correspond 1:1 to this controller's printed labels).
+
+If you'd rather have Xbox-style position mapping instead of label matching, revert to
+the upstream defaults (`B=1 A=2 Y=4 X=3`).
 
 ## Known gaps
 
