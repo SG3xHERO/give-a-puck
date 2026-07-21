@@ -7,6 +7,10 @@
 // https://github.com/libsdl-org/SDL/blob/main/src/joystick/hidapi/steam/controller_constants.h
 
 #define REPORT_INPUT             0x45
+// The 2.4GHz wireless "puck" dongle (VID 0x28de PID 0x1304) sends input reports with
+// id 0x42 instead of 0x45 - confirmed via live USB capture on real hardware. Accept
+// both so wired and wireless variants work.
+#define REPORT_INPUT_WIRELESS    0x42
 #define HID_FEATURE_REPORT_BYTES 64
 #define ID_SET_SETTINGS_VALUES   0x87
 #define SETTING_LIZARD_MODE      0x09

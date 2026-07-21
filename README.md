@@ -1,3 +1,13 @@
+# Sys-con (sg3xhero fork)
+
+> This is a fork of [o0Zz/sys-con](https://github.com/o0Zz/sys-con) with a fix for the
+> Steam Controller 2026's 2.4GHz wireless "puck" dongle (VID `28de` PID `1304`), which
+> was detected and initialized correctly upstream but never actually parsed any input
+> due to a report-ID mismatch. See
+> [doc/SteamController2026PuckFix.md](doc/SteamController2026PuckFix.md) for the full
+> writeup of the bug, how it was found, and a couple of controller-specific config
+> notes. Everything else in this README is unchanged from upstream.
+
 # Sys-con
 
 #### Connect any USB controller to your Nintendo Switch ! 

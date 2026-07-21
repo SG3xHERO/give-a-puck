@@ -25,7 +25,7 @@ ControllerResult SteamController2026::ParseData(uint8_t *buffer, size_t size, Ra
     (void)input_idx;
     Steam2026InputReport *controllerData = reinterpret_cast<Steam2026InputReport *>(buffer);
 
-    if (controllerData->report_id == REPORT_INPUT)
+    if (controllerData->report_id == REPORT_INPUT || controllerData->report_id == REPORT_INPUT_WIRELESS)
     {
         if (size < sizeof(Steam2026InputReport))
         {
